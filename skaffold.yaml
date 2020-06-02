@@ -18,6 +18,14 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+    - image: us.gcr.io/tough-cipher-278814/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
     - image: us.gcr.io/tough-cipher-278814/client
       context: client
       docker:
